@@ -21,8 +21,8 @@ class LinearRegression {
 
     const bSlope =
       (_.sum(
-        currentGuessesForMP.map((guess, i) => {
-          return guess - this.label[i][0];
+        currentGuessesForMPG.map((guess, i) => {
+          return guess - this.labels[i][0];
         })
       ) *
         2) /
@@ -30,8 +30,8 @@ class LinearRegression {
 
     const mSlope =
       (_.sum(
-        currentGuessesForMP.map((guess, i) => {
-          return -1 * this.features[i][0] - this.label[i][0] * guess;
+        currentGuessesForMPG.map((guess, i) => {
+          return -1 * this.features[i][0] - this.labels[i][0] * guess;
         })
       ) *
         2) /
@@ -43,7 +43,7 @@ class LinearRegression {
 
   train() {
     for (let i = 0; i < this.options.iterations; i++) {
-      this.gadientDeescent();
+      this.gradientDescend();
     }
   }
 }
