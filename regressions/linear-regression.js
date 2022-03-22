@@ -14,7 +14,7 @@ class LinearRegression {
       { learningRate: 0.1, iterations: 1000 },
       options
     );
-    this.weights = ts.zeros([2,1]);
+    this.weights = tf.zeros([2,1]);
   }
 
   gradientDescend() {
