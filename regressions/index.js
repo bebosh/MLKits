@@ -17,4 +17,4 @@ const regression = new linearRegression(features, labels, {
 
 regression.train();
 
-console.log('Updater m:', regression.m, 'Updated b:', regression.b);
+console.log('Updater m:', regression.weights.get(1,0), 'Updated b:', regression.weights.get(0,0));
